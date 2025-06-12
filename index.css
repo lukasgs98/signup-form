@@ -1,5 +1,146 @@
 @font-face {
-    font-family: myFont;
+    font-family: logoFont;
     src: url(/assets/norse-bold.otf);
 }
 
+* {
+    font-family: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
+    font-weight: normal;
+}
+
+body {
+    background-color: #F9FAFB;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    min-height: 100vh;
+}
+
+aside {
+    position: relative;
+}
+
+.img-overlay {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-overlay > img {
+    max-height: 100%;
+    width: 15%;
+}
+
+.img-overlay > span {
+    padding-top: 0.75rem;
+    font-family: logoFont;
+    font-size: 200%;
+    color: white;
+}
+
+.background-img {
+    position: absolute;
+    z-index: -1;
+    min-height: 100%;
+}
+
+.text-area {
+    max-width: 75ch;
+    padding: 4rem 1rem 2rem 1rem;
+}
+
+.text-area p {
+    padding-top: 1rem;
+}
+
+.input-area {
+    padding: 2rem 1rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-areas:
+        'header header'
+        'first-name last-name'
+        'email phone-number'
+        'password confirm-password';
+    grid-auto-columns: 33%;
+    background-color: white;
+    box-shadow: 0 8px 10px -4px gray;
+    position: relative;
+    z-index: 10;
+}
+
+.input-area > h1 {
+    grid-area: header;
+}
+
+.input-area > label[for="first_name"] {
+    grid-area: first-name;
+}
+
+.input-area > label[for="last_name"] {
+    grid-area: last-name;
+}
+
+.input-area > label[for="email"] {
+    grid-area: email;
+}
+
+.input-area > label[for="phone_number"] {
+    grid-area: phone-number;
+}
+
+.input-area > label[for="password"] {
+    grid-area: password;
+}
+
+.input-area > label[for="confirm_password"] {
+    grid-area: confirm-password;
+}
+
+.input-area > label {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    border: 0.1rem solid #E5E7EB;
+    border-radius: 5px;
+}
+
+input:user-invalid {
+    background-color: #FFB3B3;
+}
+
+input:user-valid {
+    background-color: #C8F7C8;
+}
+
+input:focus {
+    background-color: #CDEEFD;
+}
+
+.submission-area {
+    max-width: 100%;
+    padding: 2rem 1rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-areas: 
+        'create-account'
+        'login-text';
+    grid-auto-columns: 33%;
+}
+
+.submission-area > button {
+    background-color: #596D48;
+    color: white;
+    border-width: 0px;
+    border-radius: 5px;
+    padding: 0.33rem 0.5rem;
+}
+
+.submission-area a {
+    color: #596D48;
+    text-decoration: none;
+}

@@ -8,6 +8,54 @@
     <title>TOP™ Sign-Up Form</title>
 </head>
 <body>
-    
+    <aside>
+        <img class="background-img" src="/assets/bg-image.avif" alt="background image">
+        <div class="img-overlay">
+            <img src="/assets/odin-lined.png">
+            <span>Odin</span>
+        </div>
+    </aside>
+    <main>
+        <form action="/signup.html" method="post">
+            <div class="text-area">
+                <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started!</p>
+                <p>You <em>know</em> you want to.</p>
+            </div>
+            <div class="input-area">
+                <h1>Let's do this!</h1>
+                <label for="first_name">
+                    FIRST NAME*
+                    <input type="text" id="first_name" required>
+                </label>
+                <label for="last_name">
+                    LAST NAME
+                    <input type="text" id="last_name">
+                </label>
+                <label for="email">
+                    EMAIL*
+                    <input type="email" id="email" required>
+                </label>
+                <label for="phone_number">
+                    PHONE NUMBER
+                    <input type="text" id="phone_number">
+                </label>
+                <label for="password">
+                    PASSWORD*
+                    <input type="password" id="password" required>
+                </label>
+                <label for="confirm_password">
+                    CONFIRM PASSWORD*
+                    <input type="password" id="confirm_password" required>
+                </label>
+            </div>
+            <div class="submission-area">
+                <button type="submit" id="create_account">Create Account</button>
+                <p>Already have an account? 
+                    <a href="/login.html" id="login">Log in</a>
+                </p>
+            </div>
+        </form>
+    </main>
+
 </body>
 </html>
